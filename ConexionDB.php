@@ -1,5 +1,5 @@
 <?php
-class Conexion_BD{
+class Conexion_DB{
 
 	 public $host;
 	 public $nameDB;
@@ -9,10 +9,10 @@ class Conexion_BD{
 
 
 	public function __construct(){
- 	 $this->host = "localhost";
-	 $this->nameDB = "";
-	 $this->user = "root";
-	 $this->pass = "";
+ 	 $this->host = "us-cdbr-iron-east-05.cleardb.net";
+	 $this->nameDB = "heroku_46ff7a27d07dfc1";
+	 $this->user = "b5bf3a024a7a60";
+	 $this->pass = "5854df32";
 	}
 
 	public function connect(){
