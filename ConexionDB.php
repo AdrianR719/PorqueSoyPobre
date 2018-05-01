@@ -12,7 +12,7 @@ class Conexion_DB{
  	 $this->host = "us-cdbr-iron-east-05.cleardb.net";
 	 $this->nameDB = "heroku_46ff7a27d07dfc1";
 	 $this->user = "b5bf3a024a7a60";
-	 $this->pass = "5854df3";
+	 $this->pass = "5854df32";
 	}
 
 	public function connect(){
