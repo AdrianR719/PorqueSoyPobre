@@ -61,6 +61,7 @@
 
 
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <?php header('Access-Control-Allow-Origin: *'); ?>
         <!-- Navigation -->
         <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
             <div class="container">
@@ -228,6 +229,19 @@
 
             boton_impuestos.onclick = function () {
                 $.ajax({
+                    url: "http://localhost:8080/impuesto/calculo",
+                    async: true,
+                    type: 'POST',
+                    data: {num: salaryRange.value},
+                    success: function (response, status, jqXHR) {
+                        console.log(response);
+                        impuestosCalculado.innerHTML = "Impuesto ISR: $" + addCommas(Number(response).toFixed(2));
+                    },
+                    error: function (jqXHR, status, error) {
+                        alert("Todo se murio");
+                    }
+                });
+               /* $.ajax({
                     url: 'http://localhost:8080/calculo/' + this.value,
                     async: true,
                     success: function (response, status, jqXHR) {
@@ -237,8 +251,9 @@
                     error: function (jqXHR, status, error) {
                         alert("Todo se murio");
                     }
-                });
+                });*/
             }
+            //Funcion para añadir comas a numeros
             function addCommas(nStr) {
                 nStr += '';
                 x = nStr.split('.');
