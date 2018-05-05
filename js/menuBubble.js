@@ -15,15 +15,7 @@ const tspan_delta = 16;
 
 //name is used as the title for the bubble
 //icon is the id of the corresponding svg symbol
-const services_data = [
-    {name: "Industries"},
-    {name: "Validation\n(C&Q and CSV)"},
-    {name: "Engineering"},
-    {name: "Project\nManagement"},
-    {name: "Manufacturing\nIT"},
-    {name: "Technical\nServices"},
-    {name: "Process\nAutomation"}
-];
+
 
 const services = document.getElementById("service-collection");
 const nav_container = document.getElementById("circle-nav-services");
@@ -44,11 +36,13 @@ function setAttributes(el, options) {
 
 $(document).ready(function () {
     $.ajax({
-        url: 'http://localhost:8080/calculo/' + this.value,
+        url: 'http://localhost:8080/proyectoMexicali/proyectos',
         async: true,
         dataType:'json',
         success: function (response, status, jqXHR) {
-            console.log(response);
+
+            addService(response.proyectos[1], 0);
+
         },
         error: function (jqXHR, status, error) {
             alert("Todo se murio");
@@ -215,10 +209,6 @@ var twn_pivot_path = TweenMax.to(pivot_path, 12, {
     ease: Linear.easeNone
 });
 
-services_data.reduce((count, serv) => {
-    addService(serv, count);
-    return ++count;
-}, 0);
 
 //The variable is modified inside the function
 //but its also used later to toggle its class
