@@ -39,10 +39,10 @@ $(document).ready(function () {
         url: 'http://localhost:8080/proyectoMexicali/proyectos',
         async: true,
         dataType:'json',
+        data: {year: 2018},
         success: function (response, status, jqXHR) {
-
-            addService(response.proyectos[1], 0);
-
+            console.log(response);
+            addService(response.proyectos[1],1);
         },
         error: function (jqXHR, status, error) {
             alert("Todo se murio");
@@ -91,24 +91,10 @@ function addService(serv, index) {
     });
 
     let tspan = createSVGElement("tspan");
-    if (serv.name.indexOf('\n') >= 0) {
 
-        let tspan2 = tspan.cloneNode();
-        let name = serv.name.split('\n');
-        jQuery(tspan).text(name[0]);
-        jQuery(tspan2).text(name[1]);
-
-        setAttributes(tspan2, {
-            x: center.x,
-            dy: tspan_delta
-        });
-
+        jQuery(tspan).text(serv.proyecto);
         text.appendChild(tspan);
-        text.appendChild(tspan2);
-    } else {
-        jQuery(tspan).text(serv.name);
-        text.appendChild(tspan);
-    }
+
 
     group.appendChild(text);
     services.appendChild(group);
@@ -208,6 +194,7 @@ var twn_pivot_path = TweenMax.to(pivot_path, 12, {
     },
     ease: Linear.easeNone
 });
+
 
 
 //The variable is modified inside the function

@@ -1,0 +1,184 @@
+/* ========================
+!!! I DONT RECOMMENT TO ADD STYLES IN THIS FILE.
+MAIN EDITABLE FILE IS: base.scss 
+AND OTHER IMPORTED FILE ALSO CAN BE EDITED
+
+Project: www.templatemount.com by Vosidiy M. 
+===================== */
+/* ==================== INCLUDE FONTS ======================= */
+@import url(../fonts/roboto/font.css);
+/* ================== COMMON =================== */
+img {
+  max-width: 100%; }
+
+/* ============ text styles and paragraph ==============  */
+body, form {
+  font-size: 13px; }
+
+.section-intro {
+  background-color: #eee;
+  padding: 40px; }
+
+.title-intro {
+  text-align: center;
+  color: #2DA7B0;
+  margin: 7px 0; }
+
+/* ================ SECTION FOOTER ==================  */
+.section-content {
+  padding: 15px 0; }
+
+.title-content {
+  border-bottom: 1px solid #ddd;
+  color: #999;
+  alignment: center;
+  margin-bottom: 30px;
+  padding: 7px 0; }
+
+.section-footer {
+  padding: 30px 0;
+  background: #ddd;
+  border-top: 1px solid #ccc; }
+
+/* =================  INFOBOX =================== */
+.infobox {
+  position: relative;
+  min-height: 90px;
+  border-radius: 4px;
+  margin-bottom: 15px; }
+
+.icon-wrap {
+  position: relative;
+  display: block;
+  height: 90px;
+  width: 90px;
+  text-align: center;
+  font-size: 45px;
+  line-height: 90px; }
+
+.text-wrap {
+  overflow: hidden; }
+
+/*  --------------- infobox simple --------------- */
+.infobox-simple .icon-wrap {
+  top: 10px;
+  float: left;
+  background: rgba(0, 0, 0, 0.2); }
+.infobox-simple .text-wrap {
+  padding-left: 15px; }
+.infobox-simple .title {
+  margin-bottom: 5px; }
+
+/*  ---------------  infobox rect --------------- */
+.infobox-rect .icon-wrap {
+  float: left;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.2); }
+.infobox-rect .text-wrap {
+  padding: 7px 15px; }
+
+/*  --------------- infobox right --------------- */
+.infobox-right {
+  background-color: #ddd;
+  padding: 15px; }
+  .infobox-right .icon-wrap {
+    float: left;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.2); }
+  .infobox-right .text-wrap {
+    text-align: right; }
+
+/*  --------------- infobox more --------------- */
+.infobox-more {
+  overflow: hidden;
+  background-color: #ddd; }
+  .infobox-more .title {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold; }
+  .infobox-more p {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px; }
+  .infobox-more .text-wrap {
+    padding: 15px; }
+  .infobox-more .icon-wrap {
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    z-index: 0;
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0.15); }
+  .infobox-more .infobox-link {
+    position: relative;
+    text-align: center;
+    padding: 3px 0;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    text-decoration: none; }
+    .infobox-more .infobox-link:hover {
+      color: #fff;
+      background: rgba(0, 0, 0, 0.15); }
+
+/*  --------------- infobox center --------------- */
+.infobox-center {
+  margin-top: 15px;
+  background-color: #ddd;
+  padding: 15px; }
+  .infobox-center .icon-wrap {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.2); }
+  .infobox-center .text-wrap {
+    text-align: center;
+    margin-top: 15px; }
+  .infobox-center .title {
+    margin-bottom: 0px;
+    font-size: 20px; }
+  .infobox-center p {
+    margin-bottom: 0; }
+
+/* =================  DEFINED VARIABLES =================== */
+.icon-sm {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 32px; }
+
+.icon-lg {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 42px; }
+
+.round-corner {
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px; }
+
+.round {
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%; }
+
+.bg-green, .bg-red, .bg-blue {
+  color: #fff !important; }
+
+.bg-green {
+  background-color: #72c02c !important; }
+
+.bg-red {
+  background-color: #e74c3c !important; }
+
+.bg-blue {
+  background-color: #2a2726 !important; }
+
+/*# sourceMappingURL=mystyle.css.map */
