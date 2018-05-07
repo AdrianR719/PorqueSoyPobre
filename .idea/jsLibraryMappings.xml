@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{TweenMax, html5shiv, jquery, respond}" />
+    <file url="PROJECT" libraries="{TweenMax, anychart-base, anychart-bundle, anychart-core, anychart-exports, anychart-pie, anychart-ui, c3, d3, html5shiv, jquery, respond}" />
   </component>
 </project>

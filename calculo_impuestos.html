@@ -12,7 +12,9 @@
         <!-- Custom CSS -->
         <link href="css/theme.css" rel="stylesheet">
         <link rel="stylesheet" href="css/button.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" />
+
         <!-- Custom Fonts -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -27,8 +29,10 @@
         <style>
             .slider {
                 -webkit-appearance: none;
-                width: 100%;
+                width: 80%;
                 height: 15px;
+                margin-left: 10px;
+                margin-right: 10px;
                 border-radius: 5px;   
                 background: #254f43;
                 outline: none;
@@ -132,65 +136,32 @@
         <section>
             <div id="wrapper"  >
                 <div id="content" >
-                    <h2>División de impuestos</h2>
-                    <ul id="bar">
-                        <li id="iphone">
+                    <h2>División de impuestos del Gobierno Federal</h2>
 
-                            <div class="bottom">
-                                <div class="infobox" style="margin-left:50px;  ">
-                                    <h3>Gastos de Funcionamiento</h3>
-                                    <p>89.13%</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="macbook" style="margin-top:100px">
-
-                            <div class="bottom" >
-                                <div class="infobox" style="margin-left:50px;" >
-                                    <h3>Transferencia, Asignaciones, Subsidios y Otras Ayudas</h3>
-                                    <p>3.74%</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="ipod" style="margin-top:100px">
-
-                            <div class="bottom">
-                                <div class="infobox" style="margin-left:50px;">
-                                    <h3>Participaciones y Aportaciones</h3>
-                                    <p>0%</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="cinema" style="margin-top:100px">
-
-                            <div class="bottom">
-                                <div class="infobox" style="margin-left:50px;">
-                                    <h3>Deuda Pública</h3>
-                                    <p>2.32%</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="macmini" style="margin-top:100px">
-
-                            <div class="bottom">
-                                <div class="infobox" style="margin-left:50px;">
-                                    <h3>Otros Gastos y Pérdidas Extraordinarias</h3>
-                                    <p>0.17%</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="invPublica" style="margin-top:100px">
-
-                            <div class="bottom">
-                                <div class="infobox" style="margin-left:50px;">
-                                    <h3>Inversión Pública</h3>
-                                    <p>4.64%</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
+            <div id="chart" style="width: 500px;height: 500px">hola</div>
+            <script>
+                anychart.onDocumentLoad(function () {
+                    // create an instance of a pie chart
+                    var chart = anychart.pie();
+                    // set the data
+                    chart.data([
+                        ["Chocolate", 5],
+                        ["Rhubarb compote", 2],
+                        ["Crêpe Suzette", 2],
+                        ["American blueberry", 2],
+                        ["Buttermilk", 1]
+                    ]);
+                    // set chart title
+                    chart.title("Top 5 pancake fillings");
+                    // set the container element 
+                    chart.container("container");
+                    // initiate chart display
+                    chart.draw();
+                });
+
+            </script>
         </section>
         <!-- Footer -->
         <footer>
@@ -206,6 +177,7 @@
 
                 </p>
             </div>
+
         </footer>
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
@@ -215,6 +187,8 @@
         <script src="js/jquery.easing.min.js"></script>
         <!-- Custom Theme JavaScript -->
         <script src="js/theme.js"></script>
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="js/calculoImpuesto.js"> </script>
     </body>

@@ -8,6 +8,25 @@ salaryRange.oninput = function () {
     //impuestosCalculado.innerHTML = "Impuesto: $" + addCommas(parseFloat(calculoIsr(this.value)).toFixed(2));
 };
 
+$(document).ready(function () {
+    connectService(new Date().getFullYear());
+});
+
+function connectService(year) {
+    $.ajax({
+        url: 'http://localhost:8080/proyectoMexicali/proyectos',
+        async: true,
+        dataType:'json',
+        data: {year: year},
+        success: function (response, status, jqXHR) {
+
+        },
+        error: function (jqXHR, status, error) {
+            alert("Todo se murio");
+        }
+    });
+}
+
 boton_impuestos.onclick = function () {
     $.ajax({
         url: "http://localhost:8080/impuesto/calculo",
@@ -19,6 +38,8 @@ boton_impuestos.onclick = function () {
             impuestosCalculado.innerHTML = "Impuesto ISR: $" + addCommas(Number(response).toFixed(2));
         },
         error: function (jqXHR, status, error) {
+
+
             alert("Todo se murio");
         }
     });
@@ -46,3 +67,4 @@ function addCommas(nStr) {
     }
     return x1 + x2;
 }
+
