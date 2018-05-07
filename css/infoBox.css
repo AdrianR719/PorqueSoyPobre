@@ -94,12 +94,12 @@ body, form {
   background-color: #ddd; }
   .infobox-more .title {
     margin-top: 0;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold; }
   .infobox-more p {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 12px; }
+    font-size: 10px; }
   .infobox-more .text-wrap {
     padding: 15px; }
   .infobox-more .icon-wrap {
