@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 function connectService(year) {
     $.ajax({
-        url: 'https://web-services1.herokuapp.com/webService/proyectosMexicali',
+        url: 'http://localhost:8080/proyectoMexicali/proyectos',
         async: true,
         dataType:'json',
         data: {year: year},
@@ -53,10 +53,8 @@ function connectService(year) {
 
 function displayData(proyects,cant,sum,year){
     var i;
-    document.getElementById("title").innerHTML = "$" + addCommas(sum);
-    document.getElementById("info2").innerHTML = "Monto gastado en Mexicali durante el " + year +" de un total de "+cant + " proyectos";
 
-    var text = document.getElementById("infoProyects");
+    var text = document.getElementById("table");
     text.innerHTML = "";
     for (i = 0; i < cant; i++) {
         text.innerHTML +="<div class=\"col-sm-4\">\n" +
