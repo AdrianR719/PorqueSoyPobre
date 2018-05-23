@@ -14,7 +14,7 @@ $(document).ready(function () {
 
 function connectService(numero) {
     $.ajax({
-        url: 'https://web-services1.herokuapp.com/webService/caulculoImpuesto',
+        url: 'https://web-services1.herokuapp.com/webService/caulculoImpuestos',
         async: true,
         dataType:'json',
         data: {num: numero},
@@ -29,7 +29,7 @@ function connectService(numero) {
 
 boton_impuestos.onclick = function () {
     $.ajax({
-        url: "https://web-services1.herokuapp.com/webService/caulculoImpuesto",
+        url: "https://web-services1.herokuapp.com/webService/caulculoImpuestos",
         async: true,
         type: 'POST',
         data: {num: salaryRange.value},
