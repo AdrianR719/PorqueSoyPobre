@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 function connectService(year) {
     $.ajax({
-        url: 'hhttps://web-services1.herokuapp.com/webService/proyectosMexicali',
+        url: 'https://web-services1.herokuapp.com/webService/proyectosMexicali',
         async: true,
         dataType:'json',
         data: {year: year},
