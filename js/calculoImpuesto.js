@@ -9,15 +9,15 @@ salaryRange.oninput = function () {
 };
 
 $(document).ready(function () {
-    connectService(new Date().getFullYear());
+    connectService(salaryRange.value);
 });
 
-function connectService(year) {
+function connectService(numero) {
     $.ajax({
-        url: 'http://localhost:8080/proyectoMexicali/proyectos',
+        url: 'https://web-services1.herokuapp.com/webService/caulculoImpuesto',
         async: true,
         dataType:'json',
-        data: {year: year},
+        data: {num: numero},
         success: function (response, status, jqXHR) {
 
         },
@@ -29,7 +29,7 @@ function connectService(year) {
 
 boton_impuestos.onclick = function () {
     $.ajax({
-        url: "http://localhost:8080/impuesto/calculo",
+        url: "https://web-services1.herokuapp.com/webService/caulculoImpuesto",
         async: true,
         type: 'POST',
         data: {num: salaryRange.value},
